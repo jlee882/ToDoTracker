@@ -23,6 +23,60 @@ Example code:
 let name: string = "name";
 let age: number;
 let isStudent: boolean;
-let hobbies: string[]; // array of strings
+let hobbies: string[]; // arry of strings
 let roleTuple: [string, number];
+
+roleTuple = ["text", 5];
+
+type Person = {
+  name: string
+  age?: number;
+}
+
+let person: Person = {
+  name: "Alice",
+}
+
+let people: Person[]; //object array
+
+
+let ageHybrid: number | string;
+agHybrid = "fifty";
+ageHybrid = 5;
 ```
+
+### Interface and Type
+```
+interface Person1 {
+  name: string;
+  age?: number;
+}
+
+type X = {
+  a: string;
+  b: number;
+}
+
+type Y = X & {  //use properties of type X inside type Y
+  c: string;
+  d: number;
+}
+
+let y: Y = { //must have a, b
+  a: "a",
+  b: 2,
+  c: "c",
+  d: 4
+}
+
+interface Person2 {
+  name: string;
+  age?: number;
+}
+
+interface Guy extends Person2 {
+  profession: string;
+}
+```
+
+timestamp: 25m
